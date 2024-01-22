@@ -1,4 +1,4 @@
-import css from './ContactsList.module.css';
+// import css from './ContactsList.module.css';
 
 const ContactsList = ({ items }) => {
   const elements = items.map(({ id, name, number }) => (
