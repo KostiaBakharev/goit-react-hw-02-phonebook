@@ -1,0 +1,25 @@
+.wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 18px;
+  /* font-weight: 500; */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.wrapp button {
+  width: 120px;
+}
+
+.wrapp input {
+  max-width: 200px;
+  width: 100%;
+}
