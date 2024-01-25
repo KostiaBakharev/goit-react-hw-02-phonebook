@@ -6,6 +6,7 @@ export class App extends Component {
     contacts: [],
     name: '',
     number: '',
+    filter: '',
   };
   render() {
     return <MyContacts />;

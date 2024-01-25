@@ -4,6 +4,7 @@ import { Component } from 'react';
 const INITIAL_STATE = {
   name: '',
   number: '',
+  filter: '',
 };
 
 class PhonebookForm extends Component {
@@ -13,8 +14,13 @@ class PhonebookForm extends Component {
     const { name, value } = target;
 
     this.setState({
-      [name]: value,
+      [name]: name === 'number' ? this.formatPhoneNumber(value) : value,
     });
+  };
+  formatPhoneNumber = input => {
+    return input
+      .replace(/\D/g, '')
+      .replace(/(\d{3})(\d{2})(\d{2})/, '$1-$2-$3');
   };
 
   handleSubmit = e => {
@@ -32,7 +38,7 @@ class PhonebookForm extends Component {
             value={name}
             onChange={this.handleChange}
             id="name"
-            placeholder="Name"
+            placeholder="Please enter name"
             type="text"
             name="name"
             required
@@ -44,10 +50,12 @@ class PhonebookForm extends Component {
             value={number}
             onChange={this.handleChange}
             id="number"
-            placeholder="Number"
+            placeholder="123-45-67"
             type="tel"
             name="number"
             required
+            maxLength="7"
+            pattern="\d{3}-\d{2}-\d{2}"
           />
         </div>
         <button type="submit">Add contact</button>
