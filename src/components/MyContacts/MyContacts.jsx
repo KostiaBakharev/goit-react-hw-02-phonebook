@@ -64,7 +64,7 @@ class MyContacts extends Component {
     );
 
     return (
-      <div>
+      <div className={css.container}>
         <h1 className={css.title}>Phonebook</h1>
         <PhonebookForm onSubmit={addContact} />
         <h2 className={css.title}>Contacts</h2>

@@ -9,9 +9,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 60vh;
+  min-height: 80vh;
   background: linear-gradient(270deg, #4c278c, #cfaf32dd);
-  /* background: linear-gradient(180deg, #5e26a3, #e45b11); */
 }
 
 code {

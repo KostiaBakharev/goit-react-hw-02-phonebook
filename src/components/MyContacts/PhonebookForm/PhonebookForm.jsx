@@ -33,8 +33,11 @@ class PhonebookForm extends Component {
     return (
       <form onSubmit={this.handleSubmit} className={css.form}>
         <div className={css.wrapp}>
-          <label htmlFor="name">Name</label>
+          <label className={css.label} htmlFor="name">
+            Name
+          </label>
           <input
+            className={css.input}
             value={name}
             onChange={this.handleChange}
             id="name"
@@ -45,8 +48,11 @@ class PhonebookForm extends Component {
           />
         </div>
         <div className={css.wrapp}>
-          <label htmlFor="number">Number</label>
+          <label className={css.label} htmlFor="number">
+            Number
+          </label>
           <input
+            className={css.input}
             value={number}
             onChange={this.handleChange}
             id="number"
@@ -58,7 +64,9 @@ class PhonebookForm extends Component {
             pattern="\d{3}-\d{2}-\d{2}"
           />
         </div>
-        <button type="submit">Add contact</button>
+        <button className={css.button} type="submit">
+          Add contact
+        </button>
       </form>
     );
   }
